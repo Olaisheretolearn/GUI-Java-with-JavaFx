@@ -20,7 +20,7 @@ public class FunctionFile {
     }
 
     public void open(){
-        FileDialog fd = new FileDialog(gui.window, "open", FileDialog.LOAD);
+        FileDialog fd = new FileDialog(gui.window, "Open", FileDialog.LOAD);
         fd.setVisible(true);
     }
 
