@@ -2,6 +2,8 @@ package org.example;
 
 import org.example.GUI;
 
+import java.awt.*;
+
 public class FunctionFile {
     GUI gui;
 
@@ -15,6 +17,11 @@ public class FunctionFile {
         // since it was public in GUI , using a instance of the GUI class to access its variables
         gui.textArea.setText(" ");
         gui.window.setTitle("New");
+    }
+
+    public void open(){
+        FileDialog fd = new FileDialog(gui.window, "open", FileDialog.LOAD);
+        fd.setVisible(true);
     }
 
 }

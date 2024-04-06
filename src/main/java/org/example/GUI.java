@@ -73,6 +73,8 @@ public class GUI implements ActionListener {
         menuFile.add(iNew);
 
         iOpen = new JMenuItem("Open");
+        iOpen.addActionListener(this);
+        iOpen.setActionCommand("New");
         menuFile.add(iOpen);
 
         iSave = new JMenuItem("Save");
@@ -90,7 +92,9 @@ public class GUI implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String command  = e.getActionCommand();
         switch(command){
-            case "New" : file.newFile(); break;
+            case "New" : file.newFile();
+            break;
+            case "Open" :file.open(); break;
         }
     }
 }
